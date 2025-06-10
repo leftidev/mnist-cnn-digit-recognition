@@ -11,40 +11,40 @@ This project is to learn about neural networks, specifically focusing on the app
 3. **visualize_mnist_dataset.py**: Visualizes a selection of handwritten digits from the MNIST dataset.
 4. **label_digits.py**: Generates a label file for handwritten digit images stored in a specified directory.
 
-## Script Descriptions
+# Script Descriptions
 
-### train_mnist.py
+## train_mnist.py
 
 This script implements a Convolutional Neural Network (CNN) for handwritten digit recognition using the MNIST dataset. 
 
-#### Data Preprocessing
+### Data Preprocessing
 
 - The images are normalized to a range of [0, 1] by dividing the pixel values by 255.0.
 - The training and test images are reshaped to include a channel dimension, resulting in a shape of (28, 28, 1).
 - Labels are converted to one-hot encoding to facilitate multi-class classification.
 
-#### Training and Validation Split
+### Training and Validation Split
 
 - The model is trained using 80% of the training data, with 20% reserved for validation to monitor the model's performance during training.
 
-#### Model architecture
+### Model architecture
 
 - Input Layer: Accepts images of shape (28, 28, 1).
 - Convolutional Layers: Three convolutional layers with ReLU activation, followed by max pooling layers.
 - Flatten Layer: Converts the 3D output to a 1D vector.
 - Dense Layers: Includes a hidden layer with 64 units and an output layer with 10 units (one for each digit) using softmax activation.
 
-#### Model Compilation
+### Model Compilation
 
 - Optimizer: Adam
 - Loss Function: Categorical crossentropy
 - Metrics: Accuracy
 
-#### Model Saving and Visualization
+### Model Saving and Visualization
 
 - The model is trained for 10 epochs with a batch size of 64, and the trained model is saved as `mnist_model.h5`. Training history is plotted to visualize accuracy over epochs.
 
-### predict_digits.py
+## predict_digits.py
 
 This script recognizes handwritten digits from images stored in a specified directory.
 
@@ -56,7 +56,7 @@ This script recognizes handwritten digits from images stored in a specified dire
 
 _To use this script, ensure your images are placed in the `./own_digits/` directory and are in JPEG format. Run the script to see the predictions for each image._
 
-### visualize_mnist_dataset.py
+## visualize_mnist_dataset.py
 
 This script visualizes handwritten digits from the MNIST dataset.
 
@@ -66,7 +66,7 @@ This script visualizes handwritten digits from the MNIST dataset.
 
 _To visualize the MNIST dataset, ensure the dataset is available in the specified directory and run the script._
 
-### label_digits.py
+## label_digits.py
 
 This script generates a label file for handwritten digit images stored in a specified directory.
 
