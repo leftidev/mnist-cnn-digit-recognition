@@ -2,7 +2,7 @@
 
 This project is to learn about neural networks, specifically focusing on the application of Convolutional Neural Networks (CNNs) for visual recognition. It utilizes the MNIST dataset to train a CNN for recognizing handwritten digits. The dataset consists of 60,000 training images and 10,000 test images, serving as a benchmark for image classification tasks.
 
-<img src="screenshot.png" alt="Description of the screenshot" width="400" height="300"/>
+<img src="screenshot.png" alt="Description of the screenshot" width="800" height="600"/>
 
 ## Summary of Scripts
 
