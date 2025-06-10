@@ -15,7 +15,7 @@ This project is to learn about neural networks, specifically focusing on the app
 
 ## train_mnist.py
 
-This script implements a Convolutional Neural Network (CNN) for handwritten digit recognition using the MNIST dataset. 
+This script implements a Convolutional Neural Network (CNN) for handwritten digit recognition using the MNIST dataset.
 
 ### Data Preprocessing
 
@@ -29,20 +29,21 @@ This script implements a Convolutional Neural Network (CNN) for handwritten digi
 
 ### Model architecture
 
+- Sequential Model
 - Input Layer: Accepts images of shape (28, 28, 1).
-- Convolutional Layers: Three convolutional layers with ReLU activation, followed by max pooling layers.
+- Convolutional Layers: Three convolutional layers with ReLU activation, followed by batch normalization and max pooling layers.
 - Flatten Layer: Converts the 3D output to a 1D vector.
-- Dense Layers: Includes a hidden layer with 64 units and an output layer with 10 units (one for each digit) using softmax activation.
+- Dense Layers: Includes a hidden layer with 128 units and an output layer with 10 units (one for each digit) using softmax activation. A dropout layer is also included after the hidden layer for regularization to prevent overfitting.
 
 ### Model Compilation
 
-- Optimizer: Adam
-- Loss Function: Categorical crossentropy
-- Metrics: Accuracy
+- Optimizer: Adam (Adaptive Moment Estimation) with a learning rate of 0.001.
+- Loss Function: Categorical crossentropy.
+- Metrics: Accuracy.
 
 ### Model Saving and Visualization
 
-- The model is trained for 10 epochs with a batch size of 64, and the trained model is saved as `mnist_model.h5`. Training history is plotted to visualize accuracy over epochs.
+- The model is trained for 10 epochs with a batch size of 64, and the trained model is saved as `mnist_model.keras`. Training history is plotted to visualize accuracy over epochs.
 
 ## predict_digits.py
 
@@ -50,7 +51,7 @@ This script recognizes handwritten digits from images stored in a specified dire
 
 1. **Load Pre-trained Model**: Loads the model from `trained_models/mnist_model.h5`.
 2. **Image Loading**: Scans the `./own_digits/` directory for JPEG images.
-3. **Image Preprocessing**: Inverts colors, resizes images to 28x28 pixels, normalizes pixel values, and reshapes them for model input.
+3. **Image Preprocessing**: Inverts colors, applies Gaussian Blur to reduce noise, applies adaptive thresholding, resizes images to 28x28 pixels, normalizes pixel values, and reshapes them for model input.
 4. **Prediction**: Feeds preprocessed images into the model to predict the digit with the highest probability.
 5. **Display Results**: Shows the original and processed images alongside the predicted digit using Matplotplib.
 
