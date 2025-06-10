@@ -64,7 +64,7 @@ This script visualizes handwritten digits from the MNIST dataset.
 
 _To visualize the MNIST dataset, ensure the dataset is available in the specified directory and run the script._
 
-#### label_digits.py
+### label_digits.py
 
 This script generates a label file for handwritten digit images stored in a specified directory.
 
