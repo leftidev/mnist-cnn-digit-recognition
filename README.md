@@ -49,7 +49,7 @@ This script implements a Convolutional Neural Network (CNN) for handwritten digi
 
 This script recognizes handwritten digits from images stored in a specified directory.
 
-1. **Load Pre-trained Model**: Loads the model from `trained_models/mnist_model.h5`.
+1. **Load Pre-trained Model**: Loads the model from `trained_models/mnist_model.keras`.
 2. **Image Loading**: Scans the `./own_digits/` directory for JPEG images.
 3. **Image Preprocessing**: Inverts colors, applies Gaussian Blur to reduce noise, applies adaptive thresholding, resizes images to 28x28 pixels, normalizes pixel values, and reshapes them for model input.
 4. **Prediction**: Feeds preprocessed images into the model to predict the digit with the highest probability.
