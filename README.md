@@ -81,4 +81,4 @@ _To use this script, ensure your images are named in the format `label_filename.
 ## Libraries and Frameworks
 
 - This project utilizes TensorFlow and Keras for building and training the CNN model.
-- Matplotlib is used for visualizing the training history.
+- Matplotlib is used for visualizing the training history and digit predictions.
